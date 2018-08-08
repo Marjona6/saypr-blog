@@ -1,0 +1,16 @@
+{
+  "name": "saypr-blog",
+  "version": "1.0.0",
+  "description": "Barebones blogging CRUD app for Saypr.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Meryem Yanar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.16.0",
+    "sequelize": "^4.38.0"
+  }
+}
