@@ -1,8 +1,9 @@
-import User from '../models/user';
+// import User from '../models/user';
+const User = require('../models/user');
 
 const sequelize = require('sequelize');
 // const faker = require('faker');
-const { body } = require('express-validator/check');
+// const { body } = require('express-validator/check');
 // add more from express-validator to validate all data for creating docs
 
 module.exports = app => {

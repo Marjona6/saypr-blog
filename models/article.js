@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
 		title: DataTypes.STRING,
 		text: DataTypes.TEXT,
 		tags: {
-			type: DataTypes.ARRAY,
+			type: DataTypes.STRING,
 			get() {
 				return this.getDataValue('tags').split(';');
 			},

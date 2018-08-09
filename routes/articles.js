@@ -1,8 +1,7 @@
-import Article from '../models/article';
-
+const Article = require('../models/article');
 const sequelize = require('sequelize');
 // const faker = require('faker');
-const { body } = require('express-validator/check');
+// const { body } = require('express-validator/check');
 // add more from express-validator to validate all data for creating docs
 
 module.exports = app => {
@@ -10,10 +9,21 @@ module.exports = app => {
 		// get all articles
 		.get('/articles', async (req, res) => {
 			// todo
+			await Article
+				.findAll({})
+				.then(articles => {
+					res.status(200).json(articles);
+				})
+				.catch(err => {
+					console.error(err);
+					res.json({
+						error: err
+					});
+				});
 		})
 
 		// get article by article ID
-		.get('/articles/:id', async (req, res) => {
+		.get('/article/:id', async (req, res) => {
 			// todo
 		})
 
