@@ -89,6 +89,7 @@ app
       User
         .findAll({})
         .then(users => {
+          console.log(users);
           res.status(200).json(users);
         })
         .catch(err => {
@@ -100,9 +101,10 @@ app
     })
 
     // get user by username
+    // doesn't work right? returns the user even when req.params.username does not match
     .get('/user/:username', async (req, res) => {
       User
-        .find({ username: req.params.username })
+        .find({ where: {username: req.params.username} })
         .then(user => {
           res.status(200).json(user);
         })

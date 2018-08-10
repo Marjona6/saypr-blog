@@ -25,7 +25,7 @@ Article.belongsToMany(Tag, { through: ArticleTag, unique: false });
 Tag.belongsToMany(Article, { through: ArticleTag, unique: false });
 Article.belongsTo(User);
 
-sequelize.sync({ force: true })
+sequelize.sync({ force: false })
 	.then(() => {
 		console.log('Database and tables created!');
 	})
