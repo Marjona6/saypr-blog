@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 	let Article = sequelize.define('Article', {
+		id: { type: DataTypes.UUID, primaryKey: true },
 		title: DataTypes.STRING,
 		text: DataTypes.TEXT,
 		tags: {
