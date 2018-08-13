@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
 	});
 
 	Tag.associate = models => {
+		// a tag can have many articles and an article can have many tags
 		models.Tag.hasMany(models.Article);
 	};
 

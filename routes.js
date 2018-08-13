@@ -1,3 +1,4 @@
+// delete this
 module.exports = app => {
 	require('./routes/users')(app);
 	require('./routes/articles')(app);
